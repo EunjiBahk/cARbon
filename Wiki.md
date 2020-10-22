@@ -1,5 +1,3 @@
-# [UXDM_AVRP] MoleculAR 
-
 ### TEAM MEMBER
 > Marie-Christin Reiner
 >
@@ -13,7 +11,10 @@
 ### MOTIVATION
 > Show 3D molecules in chemistry classes to help students to understand/imagine it better
 
-### Proposed outcome
+---
+
+
+### PROPOSED OUTCOME
 + Useful 3D molucules in AR (Mobile/Tablet)
 + Educational material
   - Learn how a molecule looks like by typing the sum formula on the Device 
