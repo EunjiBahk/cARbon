@@ -1,4 +1,2 @@
 # Description
-Useful 3D Organic chemistry molecules in Augmented Reality(AR) for educational purposes
-
-test
+AR Application of 3D molecules that can be used by people who are interested in Chemistry
