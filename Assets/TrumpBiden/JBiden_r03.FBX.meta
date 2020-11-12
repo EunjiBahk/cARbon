@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: 038184759914e904fbf1f0ad00e2b32b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bip
+    100002: bip Head
+    100004: bip L Calf
+    100006: bip L Clavicle
+    100008: bip L Finger0
+    100010: bip L Finger01
+    100012: bip L Finger1
+    100014: bip L Finger11
+    100016: bip L Finger2
+    100018: bip L Finger21
+    100020: bip L Foot
+    100022: bip L Forearm
+    100024: bip L Hand
+    100026: bip L Thigh
+    100028: bip L Toe0
+    100030: bip L UpperArm
+    100032: bip Neck
+    100034: bip Pelvis
+    100036: bip R Calf
+    100038: bip R Clavicle
+    100040: bip R Finger0
+    100042: bip R Finger01
+    100044: bip R Finger1
+    100046: bip R Finger11
+    100048: bip R Finger2
+    100050: bip R Finger21
+    100052: bip R Foot
+    100054: bip R Forearm
+    100056: bip R Hand
+    100058: bip R Thigh
+    100060: bip R Toe0
+    100062: bip R UpperArm
+    100064: bip Spine
+    100066: bip Spine1
+    100068: jbiden_boddy
+    100070: JBiden_hair
+    100072: jbiden_head
+    100074: //RootNode
+    100076: rig_CharRoot
+    100078: rig_eyeBoneL
+    100080: rig_eyeBoneR
+    400000: bip
+    400002: bip Head
+    400004: bip L Calf
+    400006: bip L Clavicle
+    400008: bip L Finger0
+    400010: bip L Finger01
+    400012: bip L Finger1
+    400014: bip L Finger11
+    400016: bip L Finger2
+    400018: bip L Finger21
+    400020: bip L Foot
+    400022: bip L Forearm
+    400024: bip L Hand
+    400026: bip L Thigh
+    400028: bip L Toe0
+    400030: bip L UpperArm
+    400032: bip Neck
+    400034: bip Pelvis
+    400036: bip R Calf
+    400038: bip R Clavicle
+    400040: bip R Finger0
+    400042: bip R Finger01
+    400044: bip R Finger1
+    400046: bip R Finger11
+    400048: bip R Finger2
+    400050: bip R Finger21
+    400052: bip R Foot
+    400054: bip R Forearm
+    400056: bip R Hand
+    400058: bip R Thigh
+    400060: bip R Toe0
+    400062: bip R UpperArm
+    400064: bip Spine
+    400066: bip Spine1
+    400068: jbiden_boddy
+    400070: JBiden_hair
+    400072: jbiden_head
+    400074: //RootNode
+    400076: rig_CharRoot
+    400078: rig_eyeBoneL
+    400080: rig_eyeBoneR
+    2100000: lp100_char
+    4300000: jbiden_head
+    4300002: jbiden_boddy
+    4300004: JBiden_hair
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: jbiden_boddy
+    13700002: JBiden_hair
+    13700004: jbiden_head
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lp100_char
+    second: {fileID: 2100000, guid: 8e122dba61fc6d443ba5dae9f8779c8d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
