@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="CH4_methan_valenceFormula" size="0.148000 0.105010" />
+    <ImageTarget name="CH4_methan_sumFormula" size="0.148000 0.105010" />
+    <ImageTarget name="C3H6_cyclopropan_valenceFormula" size="0.148000 0.105010" />
+    <ImageTarget name="C3H6_cyclopropan_sumFormula" size="0.148000 0.105010" />
+  </Tracking>
+</QCARConfig>
