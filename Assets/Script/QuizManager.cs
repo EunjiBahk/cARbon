@@ -14,22 +14,27 @@ public class QuizManager : MonoBehaviour
  
     public GameObject Quizpanel;
     public GameObject Gopanel;
+    public UnityEngine.UI.Image[] Result;
 
     //public GameObject augmentationModel; image target
     public TrackableBehaviour theTrackable;
 
+    public TMP_Text RoundTxt;
     public TMP_Text QuestionTxt;  
     public TMP_Text ResultTxt;  
     public TMP_Text ScoreTxt;    
 
-    int totlaQuestions = 0;
+    public TMP_Text Markerguide;
+
+    int totalQuestions = 0;
+    int currentround = 0;
     public int score;
 
     // Start game
     private void Start()
     {
         // Count how many questions we have
-        totlaQuestions = QnA.Count;
+        totalQuestions = QnA.Count;
         // Disable Gameover panel 
         Gopanel.SetActive(false);
         // Generate question
@@ -45,7 +50,12 @@ public class QuizManager : MonoBehaviour
             // Make a random question from the question list
             currentQuestion = Random.Range(0, QnA.Count);
             // Set question text
-            QuestionTxt.text = QnA[currentQuestion].Question;
+            // QuestionTxt.text = QnA[currentQuestion].Question;
+            QuestionTxt.text = "What is the name of this molecule?\n";
+            QuestionTxt.text += "HINT: "+QnA[currentQuestion].Question;
+            // Set round
+            currentround = totalQuestions - QnA.Count + 1;
+            RoundTxt.text = "ROUND: " + currentround + "/" + totalQuestions;
             
             // Disable all child object of image target
             for (int i = 0; i < theTrackable.gameObject.transform.childCount; i++)
@@ -98,7 +108,7 @@ public class QuizManager : MonoBehaviour
         // Enable Gameover panel 
         Gopanel.SetActive(true);
         // Set score text e.g. 1/3, 2/3, 3/3..
-        ScoreTxt.text = score + "/" + totlaQuestions;
+        ScoreTxt.text = score + "/" + totalQuestions;
         if (score>=3)
         {
             // If you solve all questions, you get great messege
@@ -120,8 +130,13 @@ public class QuizManager : MonoBehaviour
     {
         // You can get additional score
         score += 1;
+
+        //Set color
+        Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(0,215,0,200);
+
         // Remove current question from the question list
         QnA.RemoveAt(currentQuestion);
+
         // Genereate next question
         generateQuestion();
     }
@@ -129,6 +144,9 @@ public class QuizManager : MonoBehaviour
     // If you select wrong answer
     public void wrong()
     {
+        //Set color
+        Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(236,0,0,200);
+
         // Remove current question from the question list
         QnA.RemoveAt(currentQuestion);
         // Genereate next question
