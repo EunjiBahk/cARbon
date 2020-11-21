@@ -110,7 +110,9 @@ public class QuizManager : MonoBehaviour
         // Enable Gameover panel 
         QOPanel.SetActive(true);
         // Disable Quiz panel 
-        QuizPanel.SetActive(false);        
+        QuizPanel.SetActive(false); 
+        // Disable Image Target
+        theTrackable.gameObject.SetActive(false);      
         for (int i=0; i< QO_Result.Length; i++)
         {
             QO_Result[i].SetActive(false);
