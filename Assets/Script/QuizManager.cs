@@ -7,30 +7,29 @@ using TMPro;
 using Vuforia;
 
 public class QuizManager : MonoBehaviour
-{
-    public List<QuestionAndAnswers> QnA;
-    public GameObject[] options;
-    public int currentQuestion;
- 
-    public GameObject QuizPanel;
+{   
     public GameObject QOPanel;
+    public GameObject QuizPanel;
 
     public UnityEngine.UI.Image[] Round_Result;
     public TMP_Text RoundTxt;
+    
+    public TMP_Text HintTxt;
 
-    //public GameObject augmentationModel; image target
+    //Image target
     public TrackableBehaviour theTrackable;
-
-    public TMP_Text QuestionTxt;
+    
+    public List<QuestionAndAnswers> QnA;
+    public GameObject[] AnswerButtons;    
+    public Sprite[] AnswerImages;
 
     public GameObject[] QO_Result;  
     public GameObject[] QO_Score;
 
+    public int currentQuestion;
+    public int score;    
     int totalQuestions = 0;
     int currentround = 0;
-    public int score;
-
-    public Sprite[] AnswerImage;
 
     // Start game
     private void Start()
@@ -55,8 +54,7 @@ public class QuizManager : MonoBehaviour
             // Make a random question from the question list
             currentQuestion = Random.Range(0, QnA.Count);
             // Set question text
-            QuestionTxt.text = "What is the name of this molecule?\n";
-            QuestionTxt.text += "HINT: "+QnA[currentQuestion].Question;
+            HintTxt.text = "HINT: "+QnA[currentQuestion].Question;
             // Set round
             currentround = totalQuestions - QnA.Count + 1;
             RoundTxt.text = "ROUND: " + currentround + "/" + totalQuestions;
@@ -122,12 +120,13 @@ public class QuizManager : MonoBehaviour
             QO_Score[i].SetActive(false);
         }
 
-        // Set result and score 
+        ///////////////////////////////// !!!!!!! FOR DEMO
+        // Set result and score     
+        // GO_Result-0: Bad, 1: Good, 2: Great
+        // GO_Score-0: 0/3, 1: 1/3, 2: 2/3, 3: 3/3
         if (score==3)
         {
             // If you solve all questions, you get great messege
-            // GO_Result-0: Bad, 1: Good, 2: Great
-            // GO_Score-0: 0/3, 1: 1/3, 2: 2/3, 3: 3/3
             QO_Result[2].SetActive(true);
             QO_Score[3].SetActive(true);
             QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(179,255,144,100);
@@ -150,6 +149,7 @@ public class QuizManager : MonoBehaviour
             QO_Score[0].SetActive(true);
             QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(255,157,144,100);
         }     
+        /////////////////////////////////
         
     }
 
@@ -185,31 +185,31 @@ public class QuizManager : MonoBehaviour
     void SetAnswers()
     {
 
-        for (int i=0; i< options.Length; i++)
+        for (int i=0; i< AnswerButtons.Length; i++)
         {
             // Set value of all answer as false first (initiate)
-            options[i].GetComponent<AnswerScript>().isCorrect = false;
+            AnswerButtons[i].GetComponent<AnswerScript>().isCorrect = false;
             // Set text from the answer option
             // options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQuestion].Answers[i];
 
             ///////////////////////////////// !!!!!!! For Demo
-            options[i].transform.GetChild(0).gameObject.SetActive(false);
+            AnswerButtons[i].transform.GetChild(0).gameObject.SetActive(false);
             if(QnA[currentQuestion].Answers[i]=="Methan"){                
-                options[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImage[0];                
+                AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImages[0];                
             } else if(QnA[currentQuestion].Answers[i]=="Ethan"){                
-                options[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImage[1];
+                AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImages[1];
             } else if(QnA[currentQuestion].Answers[i]=="Propan"){                
-                options[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImage[2];
+                AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImages[2];
             } else {                
-                options[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImage[3];
+                AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImages[3];
             }
-            options[i].GetComponent<UnityEngine.UI.Image>().SetNativeSize();
+            AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().SetNativeSize();
             /////////////////////////////////
 
             // If specific answer is correct, set value as true 
             if(QnA[currentQuestion].CorrectAnswer == i+1)
             {
-                options[i].GetComponent<AnswerScript>().isCorrect = true;
+                AnswerButtons[i].GetComponent<AnswerScript>().isCorrect = true;
             }
         }
     }
