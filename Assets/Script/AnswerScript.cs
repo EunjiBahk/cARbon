@@ -9,8 +9,6 @@ public class AnswerScript : MonoBehaviour
 
     public void Answer()
     {
-        Debug.Log("isCorrect");
-        Debug.Log(isCorrect);
         if(isCorrect)
         {
             quizManager.correct();
