@@ -12,6 +12,7 @@ public class QuizManager : MonoBehaviour
     public GameObject QuizPanel;
 
     public UnityEngine.UI.Image[] Round_Result;
+    public Sprite[] RoundImages;
     public TMP_Text RoundTxt;
     
     public TMP_Text HintTxt;
@@ -23,7 +24,7 @@ public class QuizManager : MonoBehaviour
     public GameObject[] AnswerButtons;    
     public Sprite[] AnswerImages;
 
-    public GameObject[] QO_Result;  
+    //public GameObject[] QO_Result;  
     public GameObject[] QO_Score;
 
     public int currentQuestion;
@@ -74,17 +75,23 @@ public class QuizManager : MonoBehaviour
             if(QnA[currentQuestion].Question=="CH4")
             {
                 QnA[currentQuestion].augmentationObject.transform.localPosition = new Vector3(0.03f,0.05f,0.06f);
+                QnA[currentQuestion].augmentationObject.transform.localRotation = Quaternion.identity;
             } 
             else if(QnA[currentQuestion].Question=="C3H8")
             {
                 QnA[currentQuestion].augmentationObject.transform.localPosition = new Vector3(-0.03f,0.11f,-0.06f);
+                QnA[currentQuestion].augmentationObject.transform.localRotation = Quaternion.identity;
             } 
             else if(QnA[currentQuestion].Question=="C3H6")
             {
                 QnA[currentQuestion].augmentationObject.transform.localPosition = new Vector3(-0.03f,0.08f,-0.04f);
+                QnA[currentQuestion].augmentationObject.transform.localRotation = Quaternion.identity;
             }
-            
-            QnA[currentQuestion].augmentationObject.transform.localRotation = Quaternion.identity;
+            else if(QnA[currentQuestion].Question=="C2H6")
+            {
+                QnA[currentQuestion].augmentationObject.transform.localPosition = new Vector3(0.08f,0.08f,0.04f);
+                QnA[currentQuestion].augmentationObject.transform.localRotation = Quaternion.Euler(0, 0, 90);
+            }
             
             // Set answers
             SetAnswers();            
@@ -113,10 +120,6 @@ public class QuizManager : MonoBehaviour
         QuizPanel.SetActive(false); 
         // Disable Image Target
         theTrackable.gameObject.SetActive(false);      
-        for (int i=0; i< QO_Result.Length; i++)
-        {
-            QO_Result[i].SetActive(false);
-        }
         for (int i=0; i< QO_Score.Length; i++)
         {
             QO_Score[i].SetActive(false);
@@ -124,32 +127,23 @@ public class QuizManager : MonoBehaviour
 
         ///////////////////////////////// !!!!!!! FOR DEMO
         // Set result and score     
-        // GO_Result-0: Bad, 1: Good, 2: Great
         // GO_Score-0: 0/3, 1: 1/3, 2: 2/3, 3: 3/3
         if (score==3)
         {
-            // If you solve all questions, you get great messege
-            QO_Result[2].SetActive(true);
+            // If you solve all questions, 
             QO_Score[3].SetActive(true);
-            QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(179,255,144,100);
         } else if (score==2)
         {
-            // If you solve most questions, you get good messege
-            QO_Result[1].SetActive(true);
+            // If you solve most questions
             QO_Score[2].SetActive(true);
-            QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(255,255,144,100);
         } else if (score==1)
         {
-            // If you solve few questions, you get bad messege
-            QO_Result[0].SetActive(true);
+            // If you solve few questions
             QO_Score[1].SetActive(true);
-            QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(255,157,144,100);
         } else if (score==0)
         {
-            // If you solve few questions, you get bad messege
-            QO_Result[0].SetActive(true);
+            // If you solve few questions
             QO_Score[0].SetActive(true);
-            QOPanel.GetComponent<UnityEngine.UI.Image>().color = new Color32(255,157,144,100);
         }     
         /////////////////////////////////
         
@@ -162,7 +156,8 @@ public class QuizManager : MonoBehaviour
         score += 1;
 
         //Set color
-        Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(0,215,0,200);
+        //Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(145,31,121,200);
+        Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().sprite = RoundImages[0];
 
         // Remove current question from the question list
         QnA.RemoveAt(currentQuestion);
@@ -175,10 +170,12 @@ public class QuizManager : MonoBehaviour
     public void wrong()
     {
         //Set color
-        Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(236,0,0,200);
+        //Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().color = new Color32(236,0,0,200);
+        Round_Result[currentround-1].GetComponent<UnityEngine.UI.Image>().sprite = RoundImages[1];
 
         // Remove current question from the question list
         QnA.RemoveAt(currentQuestion);
+        
         // Genereate next question
         generateQuestion();
     }
@@ -191,9 +188,7 @@ public class QuizManager : MonoBehaviour
         {
             // Set value of all answer as false first (initiate)
             AnswerButtons[i].GetComponent<AnswerScript>().isCorrect = false;
-            // Set text from the answer option
-            // options[i].transform.GetChild(0).GetComponent<TMP_Text>().text = QnA[currentQuestion].Answers[i];
-
+            
             ///////////////////////////////// !!!!!!! For Demo
             AnswerButtons[i].transform.GetChild(0).gameObject.SetActive(false);
             if(QnA[currentQuestion].Answers[i]=="Methan"){                
