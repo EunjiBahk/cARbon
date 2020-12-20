@@ -734,6 +734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ethan
       objectReference: {fileID: 0}
+    - target: {fileID: 690161648389440491, guid: a3798939acc4f6c4484e82be60fba325,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5475234909825023645, guid: a3798939acc4f6c4484e82be60fba325,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -772,7 +777,7 @@ PrefabInstance:
     - target: {fileID: 5475234909825023645, guid: a3798939acc4f6c4484e82be60fba325,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5475234909825023645, guid: a3798939acc4f6c4484e82be60fba325,
         type: 3}
@@ -1070,6 +1075,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414705967}
   m_CullTransparentMesh: 0
+--- !u!1001 &434372697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1983558408}
+    m_Modifications:
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.013
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1075
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0643
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004568229288928585, guid: b471b9afde091ae4e9f5d26d025992ab,
+        type: 3}
+      propertyPath: m_Name
+      value: Methanol
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b471b9afde091ae4e9f5d26d025992ab, type: 3}
+--- !u!4 &434372698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5451576475604323344, guid: b471b9afde091ae4e9f5d26d025992ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 434372697}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &434372699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6004568229288928585, guid: b471b9afde091ae4e9f5d26d025992ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 434372697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468685921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1531,7 @@ PrefabInstance:
     - target: {fileID: 3976191151119298854, guid: dc4f78b46a98d1241b86d7605fc02889,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3976191151119298854, guid: dc4f78b46a98d1241b86d7605fc02889,
         type: 3}
@@ -3670,6 +3771,14 @@ MonoBehaviour:
     - Methanol
     - Cyclopropane
     CorrectAnswer: 4
+  - augmentationObject: {fileID: 434372699}
+    Question: CH3OH
+    Answers:
+    - Ethanol
+    - Methanol
+    - Cyclopropane
+    - Methane
+    CorrectAnswer: 2
   currentQuestion: 0
   totalQuestions: 0
   AnswerButtons:
@@ -4216,7 +4325,7 @@ PrefabInstance:
     - target: {fileID: 1876283496486828921, guid: 9c1972e866fa0f04eb5c77bc9e4c730d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1876283496486828921, guid: 9c1972e866fa0f04eb5c77bc9e4c730d,
         type: 3}
@@ -4570,9 +4679,10 @@ Transform:
   m_LocalPosition: {x: -251, y: -350, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1801482665}
   - {fileID: 594933378}
   - {fileID: 1629335757}
+  - {fileID: 434372698}
+  - {fileID: 1801482665}
   m_Father: {fileID: 750020674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
