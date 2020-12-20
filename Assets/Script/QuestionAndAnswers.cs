@@ -3,8 +3,8 @@
 
 public class QuestionAndAnswers
 {
-    public GameObject augmentationObject;
-    public string Question;
-    public string[] Answers;
+    public GameObject augmentationObject; // 3d object of molecule
+    public string Question; // sumname of molecule
+    public string[] Answers; // list of answers
     public int CorrectAnswer;
 }
