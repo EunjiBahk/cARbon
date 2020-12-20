@@ -39,13 +39,15 @@ public class QuizManager : MonoBehaviour
     public GameObject Hint1Buttons; 
     public TMP_Text Hint1;
     public int Hint1_cnt=0;
+    public Sprite Hint1_disabled;
 
     //Hint2-sum name of molecule
     public GameObject Hint2Buttons; 
     public TMP_Text Hint2;
     public GameObject HintPanel;
     public TMP_Text HintPanel_text;
-    public int Hint2_cnt=0; 
+    public int Hint2_cnt=0;
+    public Sprite Hint2_disabled; 
 
     // Start game
     private void Start()
@@ -244,7 +246,7 @@ public class QuizManager : MonoBehaviour
         int moleculeIdx =0;
         
         // Disable hint button
-        Hint1.color = Color.gray;
+        Hint1Buttons.GetComponent<UnityEngine.UI.Image>().sprite = Hint1_disabled;
         Hint1Buttons.GetComponent<Button>().interactable = false;
         
         // Add Wrong answers to list
@@ -274,8 +276,8 @@ public class QuizManager : MonoBehaviour
         // Change Hint2 used
         Hint2_cnt=1;
 
-        // Disable hint button
-        Hint2.color = Color.gray;        
+        // Disable hint button 
+        Hint2Buttons.GetComponent<UnityEngine.UI.Image>().sprite = Hint2_disabled;      
         Hint2Buttons.GetComponent<Button>().interactable = false;
 
         // Enable HINT panel
