@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Vuforia;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class QuizManager : MonoBehaviour
 {   
@@ -169,8 +171,41 @@ public class QuizManager : MonoBehaviour
         // Disable Quiz panel, Image Target
         QuizPanel.SetActive(false);
         theTrackable.gameObject.SetActive(false);    
-        //Set score
-        QO_Score.text = score+"/"+totalQuestions;         
+        // Set score
+        QO_Score.text = score+"/"+totalQuestions;     
+
+        // Save data
+        string path = Application.persistentDataPath + "/player.carbon";
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        if(File.Exists(path)){
+            FileStream stream = new FileStream(path, FileMode.Open);
+            Userdata data = formatter.Deserialize(stream) as Userdata;
+            stream.Close();
+
+            data.attempt += 1;
+            data.score = score;
+
+            stream = new FileStream(path, FileMode.Create);
+            User user = new User();
+            user.name = data.name;
+            user.attempt = data.attempt;
+            user.score = data.score;
+
+            data = new Userdata(user);
+            formatter.Serialize(stream, data);
+            stream.Close();
+        } else{
+            FileStream stream = new FileStream(path, FileMode.Create);
+            User user = new User();
+            user.name = "User";
+            user.attempt = 1;
+            user.score = score;
+
+            Userdata data = new Userdata(user);
+            formatter.Serialize(stream, data);
+            stream.Close();
+        }
     }
 
     // If you select correct answer
