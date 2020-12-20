@@ -146,7 +146,7 @@ public class QuizManager : MonoBehaviour
                 AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().sprite = AnswerImages[4];
                 AnswerButtons[i].GetComponent<AnswerScript>().moleculeIdx = 4; 
             }
-            AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().SetNativeSize();
+            //AnswerButtons[i].GetComponent<UnityEngine.UI.Image>().SetNativeSize();
             
             // If specific answer is correct, set value as true 
             if(QnA[currentQuestion].CorrectAnswer == i+1){
@@ -284,7 +284,18 @@ public class QuizManager : MonoBehaviour
         HintPanel.SetActive(true);
         
         // Set HINT text
-        HintPanel_text.text = "HINT: "+QnA[currentQuestion].Question;
+        if(QnA[currentQuestion].Question=="Methane"){                
+            HintPanel_text.text = "- It is known as a greenhouse that is produced a lot by cows.\n- It is part of the functional group of alkanes.\n- It sum formula is CH4.";                
+        } else if(QnA[currentQuestion].Question=="Ethane"){                
+            HintPanel_text.text = "- It is part of the functional group of alkanes.\n- It sum formula is C2H6.";
+        } else if(QnA[currentQuestion].Question=="Methanol"){                
+            HintPanel_text.text = "- We also know this molecule from antifreeze and windshield washer fluid.\n- The red atom is oxygen.\n- It is part of the functional group of alcohols.";
+        } else if(QnA[currentQuestion].Question=="Ethanol"){                
+            HintPanel_text.text = "- We also know this molecule from alcoholic drinks.\n- The red atom is oxygen.\n- It is part of the functional group of alcohols.";
+        } else if(QnA[currentQuestion].Question=="Cyclopropane"){                  
+            HintPanel_text.text = "- It is part of the functional group of alkanes.\n- It has three carbon atoms and each carbon binds two hydrogens.\n- It sum formula is C3H6.";
+        }
+        
     }
 
 }
