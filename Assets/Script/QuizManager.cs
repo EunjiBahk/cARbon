@@ -171,6 +171,8 @@ public class QuizManager : MonoBehaviour
         // Disable Quiz panel, Image Target
         QuizPanel.SetActive(false);
         theTrackable.gameObject.SetActive(false);    
+        HintPanel.SetActive(false);
+        
         // Set score
         QO_Score.text = score+"/"+totalQuestions;     
 
