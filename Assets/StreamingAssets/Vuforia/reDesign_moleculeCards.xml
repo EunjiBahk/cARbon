@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="DINA6_Ethanol_reDesign" size="0.148000 0.105010" />
+    <ImageTarget name="DINA6_Methanol_reDesig" size="0.148000 0.105010" />
+    <ImageTarget name="DINA6_quizCard_reDesign" size="0.148000 0.105010" />
+    <ImageTarget name="DINA6_Cyclopropan_reDesign" size="0.148000 0.105010" />
+    <ImageTarget name="DINA6_Ethane_reDesign" size="0.148000 0.105010" />
+    <ImageTarget name="DINA6_Methane_reDesign" size="0.148000 0.105010" />
+  </Tracking>
+</QCARConfig>
