@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2647478}
   - component: {fileID: 2647477}
   m_Layer: 5
-  m_Name: SettingPanel
+  m_Name: StatisticsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1220,10 +1220,10 @@ RectTransform:
   m_Father: {fileID: 2647476}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5324445, y: 0.44300002}
-  m_AnchorMax: {x: 0.7522963, y: 0.47955638}
-  m_AnchoredPosition: {x: 4.5, y: -0.000022888184}
-  m_SizeDelta: {x: 4.778015, y: 0.94799805}
+  m_AnchorMin: {x: 0.5397778, y: 0.44500002}
+  m_AnchorMax: {x: 0.7606669, y: 0.4733133}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 3.7780151, y: 2.4944458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &743693084
 MonoBehaviour:
@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.65
+  m_fontSize: 50.9
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2312,10 +2312,10 @@ RectTransform:
   m_Father: {fileID: 2647476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5546296, y: 0.50572824}
-  m_AnchorMax: {x: 0.781, y: 0.544}
-  m_AnchoredPosition: {x: 0.000015258789, y: -0.4999771}
-  m_SizeDelta: {x: -2.2219849, y: -1.5500946}
+  m_AnchorMin: {x: 0.5573333, y: 0.5105208}
+  m_AnchorMax: {x: 0.7828519, y: 0.5398341}
+  m_AnchoredPosition: {x: -2.4999847, y: -0.5}
+  m_SizeDelta: {x: -1.2219849, y: -0.5930824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1948419030
 MonoBehaviour:
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.35
+  m_fontSize: 49.85
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
