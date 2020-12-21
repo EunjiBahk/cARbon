@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
@@ -32,7 +33,7 @@ public class Settings : MonoBehaviour
 
             nameText.text = data.name;            
             quizAttempsText.text = data.attempt.ToString();
-            lastgradeText.text = data.score.ToString();
+            lastgradeText.text = data.score.ToString()+"/5";
 
         } else{
             FileStream stream = new FileStream(path, FileMode.Create);
@@ -47,16 +48,15 @@ public class Settings : MonoBehaviour
 
             nameText.text = user.name;
             quizAttempsText.text = user.attempt.ToString();
-            lastgradeText.text = user.score.ToString();
+            lastgradeText.text = user.score.ToString()+"/5";
         }
         
         inputName.GetComponent<TMP_InputField>().placeholder.GetComponent<TMP_Text>().text = "Enter Your Name...";
 
-        Background.SetActive(false);
-        LearnButton.SetActive(false);
-        QuizButton.SetActive(false);
-        SettingsButton.SetActive(false);
-
+        LearnButton.GetComponent<Button>().interactable = false;
+        QuizButton.GetComponent<Button>().interactable = false;
+        SettingsButton.GetComponent<Button>().interactable = false;
+        
         SettingPanel.SetActive(true);
     }
 
@@ -82,11 +82,10 @@ public class Settings : MonoBehaviour
 
     public void Okay()
     {
-        Background.SetActive(true);
-        LearnButton.SetActive(true);
-        QuizButton.SetActive(true);
-        SettingsButton.SetActive(true);
-
+        LearnButton.GetComponent<Button>().interactable = true;
+        QuizButton.GetComponent<Button>().interactable = true;
+        SettingsButton.GetComponent<Button>().interactable = true;
+        
         SettingPanel.SetActive(false);
     }
 }
