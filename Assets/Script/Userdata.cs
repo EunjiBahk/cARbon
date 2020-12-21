@@ -9,10 +9,4 @@ public class Userdata
     public int attempt;
     public int score;
     
-    public Userdata (User user)
-    {
-        name = user.name;
-        attempt = user.attempt;
-        score = user.score;
-    }
 }

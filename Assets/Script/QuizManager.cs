@@ -180,6 +180,7 @@ public class QuizManager : MonoBehaviour
         string path = Application.persistentDataPath + "/player.carbon";
         BinaryFormatter formatter = new BinaryFormatter();
 
+        // Save user data
         if(File.Exists(path)){
             FileStream stream = new FileStream(path, FileMode.Open);
             Userdata data = formatter.Deserialize(stream) as Userdata;
@@ -189,22 +190,14 @@ public class QuizManager : MonoBehaviour
             data.score = score;
 
             stream = new FileStream(path, FileMode.Create);
-            User user = new User();
-            user.name = data.name;
-            user.attempt = data.attempt;
-            user.score = data.score;
-
-            data = new Userdata(user);
             formatter.Serialize(stream, data);
             stream.Close();
         } else{
             FileStream stream = new FileStream(path, FileMode.Create);
-            User user = new User();
-            user.name = "User";
-            user.attempt = 1;
-            user.score = score;
-
-            Userdata data = new Userdata(user);
+            Userdata data = new Userdata();
+            data.name = "User";
+            data.attempt = 1;
+            data.score = score;
             formatter.Serialize(stream, data);
             stream.Close();
         }
