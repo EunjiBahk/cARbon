@@ -1,4 +1,4 @@
-## AVR Project
+## c-AR-bon (AVR WS20/21)
 
 ### What is 'c-AR-bon'?
 
